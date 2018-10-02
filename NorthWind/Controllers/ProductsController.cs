@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NorthWind.Data;
 using NorthWind.Models;
+using NorthWind.ViewModels;
 
 namespace NorthWind.Controllers
 {
@@ -82,7 +83,22 @@ namespace NorthWind.Controllers
             {
                 return NotFound();
             }
-            return View(product);
+            var vm = new InMemoryProductData {
+                Categories = _context.Categories.ToList(),
+                Suppliers = _context.Suppliers.ToList(),
+                SelectedCategoryId = product.Category.CategoryID,
+                SelectedSupplierId = product.Supplier.SupplierID,
+                ProductId = product.ProductId,
+                ProductName = product.ProductName,
+                Discontinued = product.Discontinued,
+                QuantityPerUnit = product.QuantityPerUnit,
+                ReorderLevel = product.ReorderLevel,
+                UnitPrice = product.UnitPrice,
+                UnitsInStock = product.UnitsInStock,
+                UnitsOnOrder = product.UnitsOnOrder
+            };
+
+            return View(vm);
         }
 
         // POST: Products/Edit/5

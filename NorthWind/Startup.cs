@@ -49,12 +49,15 @@ namespace NorthWind
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            logger.Log(LogLevel.Information, env.EnvironmentName);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -72,8 +75,7 @@ namespace NorthWind
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)
         {
-            // /HomeController/Index/4
-            routeBuilder.MapRoute("Default",
+             routeBuilder.MapRoute("Default",
                 "{controller=Home}/{action=Index}/{id?}");
         }
     }

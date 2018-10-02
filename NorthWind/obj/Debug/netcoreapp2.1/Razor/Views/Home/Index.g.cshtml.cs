@@ -61,7 +61,7 @@ using NorthWind.Models;
             WriteLiteral("\r\n<h1>Welcome!</h1>\r\n<h2>Categories and Products</h2>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(114, 45, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b1cf0ea709c4c398f30576c09c6193d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c85e74e95a2a42d1983b548f86a256f8", async() => {
                 BeginContext(145, 10, true);
                 WriteLiteral("Categories");
                 EndContext();
@@ -83,7 +83,7 @@ using NorthWind.Models;
             WriteLiteral("\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(180, 41, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab9d15cf70dc4d6886230286ba3c3ac4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "63047b95ce964694b188a2dbd532bf18", async() => {
                 BeginContext(209, 8, true);
                 WriteLiteral("Products");
                 EndContext();

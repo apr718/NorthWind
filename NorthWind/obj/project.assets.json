@@ -12224,11 +12224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\Core\\NorthWind\\NorthWind\\NorthWind.csproj",
+      "projectUniqueName": "E:\\Projects\\Core\\NorthWind2\\NorthWind\\NorthWind.csproj",
       "projectName": "NorthWind",
-      "projectPath": "E:\\Projects\\Core\\NorthWind\\NorthWind\\NorthWind.csproj",
+      "projectPath": "E:\\Projects\\Core\\NorthWind2\\NorthWind\\NorthWind.csproj",
       "packagesPath": "C:\\Users\\Andrii_Prykhodko\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\Core\\NorthWind\\NorthWind\\obj\\",
+      "outputPath": "E:\\Projects\\Core\\NorthWind2\\NorthWind\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

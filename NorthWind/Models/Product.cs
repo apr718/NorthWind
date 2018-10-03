@@ -6,6 +6,8 @@
         public string ProductName { get; set; }
         public Supplier Supplier { get; set; }
         public Category Category { get; set; }
+        public int CategoryID { get; set; }
+        public int SupplierID { get; set; }
         public string QuantityPerUnit { get; set; }
         public decimal UnitPrice { get; set; }
         public short UnitsInStock { get; set; }

@@ -106,9 +106,10 @@ namespace NorthWind.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,QuantityPerUnit,UnitPrice," +
+            "UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued,SelectedCategoryId,SelectedSupplierId")] InMemoryProductData inMemoryProduct)
         {
-            if (id != product.ProductId)
+            if (id != inMemoryProduct.ProductId)
             {
                 return NotFound();
             }
@@ -117,12 +118,25 @@ namespace NorthWind.Controllers
             {
                 try
                 {
+                    var product = new Product
+                    {
+                        ProductId = inMemoryProduct.ProductId,
+                        CategoryID = inMemoryProduct.SelectedCategoryId,
+                        SupplierID = inMemoryProduct.SelectedSupplierId,
+                        Discontinued = inMemoryProduct.Discontinued,
+                        ProductName = inMemoryProduct.ProductName,
+                        QuantityPerUnit = inMemoryProduct.QuantityPerUnit,
+                        ReorderLevel = inMemoryProduct.ReorderLevel,
+                        UnitPrice = inMemoryProduct.UnitPrice,
+                        UnitsInStock = inMemoryProduct.UnitsInStock,
+                        UnitsOnOrder = inMemoryProduct.UnitsOnOrder,
+                    };
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.ProductId))
+                    if (!ProductExists(inMemoryProduct.ProductId))
                     {
                         return NotFound();
                     }
@@ -133,7 +147,7 @@ namespace NorthWind.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(product);
+            return View(inMemoryProduct);
         }
 
         // GET: Products/Delete/5

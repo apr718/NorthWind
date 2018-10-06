@@ -1,4 +1,4 @@
-﻿using NorthWind.Models;
+﻿using Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,15 +13,15 @@ namespace NorthWind.ViewModels
         public List<Supplier> Suppliers { get; set; }
         public List<Category> Categories { get; set; }
         [Required]
-        public int SelectedSupplierId { get; set; }
+        public int? SelectedSupplierId { get; set; }
         [Required]
-        public int SelectedCategoryId { get; set; }
+        public int? SelectedCategoryId { get; set; }
         public string QuantityPerUnit { get; set; }
         [Range(1, 5000)]
-        public decimal UnitPrice { get; set; }
-        public short UnitsInStock { get; set; }
-        public short UnitsOnOrder { get; set; }
-        public short ReorderLevel { get; set; }
+        public decimal? UnitPrice { get; set; }
+        public short? UnitsInStock { get; set; }
+        public short? UnitsOnOrder { get; set; }
+        public short? ReorderLevel { get; set; }
         [Required]
         public bool Discontinued { get; set; }
     }

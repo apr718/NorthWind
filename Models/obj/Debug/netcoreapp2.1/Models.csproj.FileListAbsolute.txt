@@ -1,0 +1,9 @@
+E:\Projects\Core\NorthWind2\Models\bin\Debug\netcoreapp2.1\Models.deps.json
+E:\Projects\Core\NorthWind2\Models\bin\Debug\netcoreapp2.1\Models.dll
+E:\Projects\Core\NorthWind2\Models\bin\Debug\netcoreapp2.1\Models.pdb
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.csprojAssemblyReference.cache
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.csproj.CoreCompileInputs.cache
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfoInputs.cache
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfo.cs
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.dll
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.pdb

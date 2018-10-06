@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using NorthWind.Data;
-using NorthWind.Models;
+using Models;
 using NorthWind.ViewModels;
+using Services.Interfaces;
+using UI.Services.Interfaces;
 
 namespace NorthWind.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly NorthWindDbContext _context;
+        //private readonly NorthWindDbContext _context;
+        private readonly IBLService _bLService;
+        private readonly IConfigurationService _configurationService;
 
-        public ProductsController(NorthWindDbContext context)
+        public ProductsController(IBLService bLService, IConfigurationService configurationService)
         {
-            _context = context;
+            _bLService = bLService;
+            _configurationService = configurationService;
         }
 
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            var lst = await _context.Products
-                .Include(p => p.Category)
-                .Include(p => p.Supplier)
-                .ToListAsync();
-            return View(lst);
+            int pageSize = _configurationService.PageSize;
+            var products = await _bLService.GetAllProductsAsync(pageSize);
+            return View(products);
         }
 
         // GET: Products/Details/5
@@ -37,9 +37,9 @@ namespace NorthWind.Controllers
             {
                 return NotFound();
             }
-
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.ProductId == id);
+            
+            var product = await _bLService.GetProductDetailsAsync(id.Value);
+                
             if (product == null)
             {
                 return NotFound();
@@ -49,9 +49,21 @@ namespace NorthWind.Controllers
         }
 
         // GET: Products/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var cats = await _bLService.GetAllCategoriesAsync();
+            var suppls = await _bLService.GetAllSuppliersAsync();
+
+            var inMemory = new InMemoryProductData
+            {
+                Categories = new List<Category>(),
+                Suppliers = new List<Supplier>()
+            };
+
+            inMemory.Categories = (List<Category>) cats;
+            inMemory.Suppliers = (List<Supplier>) suppls;
+            
+            return View(inMemory);
         }
 
         // POST: Products/Create
@@ -59,15 +71,29 @@ namespace NorthWind.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued,SelectedCategoryId,SelectedSupplierId")] InMemoryProductData inProduct)
         {
+            var product = new Product
+            {
+                CategoryID = inProduct.SelectedCategoryId,
+                SupplierID = inProduct.SelectedSupplierId,
+                ProductID = inProduct.ProductId,
+                ProductName = inProduct.ProductName,
+                Discontinued = inProduct.Discontinued,
+                QuantityPerUnit = inProduct.QuantityPerUnit,
+                ReorderLevel = inProduct.ReorderLevel,
+                UnitPrice = inProduct.UnitPrice,
+                UnitsInStock = inProduct.UnitsInStock,
+                UnitsOnOrder = inProduct.UnitsOnOrder
+            };
+
             if (ModelState.IsValid)
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
+                await _bLService.AddOrUpdateProductAsync(product);
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(product);
+            return View(inProduct);
         }
 
         // GET: Products/Edit/5
@@ -78,17 +104,17 @@ namespace NorthWind.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
+            var product = await _bLService.GetProductDetailsAsync(id.Value);
             if (product == null)
             {
                 return NotFound();
             }
             var vm = new InMemoryProductData {
-                Categories = _context.Categories.ToList(),
-                Suppliers = _context.Suppliers.ToList(),
-                SelectedCategoryId = product.Category.CategoryID,
-                SelectedSupplierId = product.Supplier.SupplierID,
-                ProductId = product.ProductId,
+                Categories = (List<Category>) await _bLService.GetAllCategoriesAsync(),
+                Suppliers = (List<Supplier>) await _bLService.GetAllSuppliersAsync(),
+                SelectedCategoryId = product.CategoryID,
+                SelectedSupplierId = product.SupplierID,
+                ProductId = product.ProductID,
                 ProductName = product.ProductName,
                 Discontinued = product.Discontinued,
                 QuantityPerUnit = product.QuantityPerUnit,
@@ -120,7 +146,7 @@ namespace NorthWind.Controllers
                 {
                     var product = new Product
                     {
-                        ProductId = inMemoryProduct.ProductId,
+                        ProductID = inMemoryProduct.ProductId,
                         CategoryID = inMemoryProduct.SelectedCategoryId,
                         SupplierID = inMemoryProduct.SelectedSupplierId,
                         Discontinued = inMemoryProduct.Discontinued,
@@ -131,8 +157,8 @@ namespace NorthWind.Controllers
                         UnitsInStock = inMemoryProduct.UnitsInStock,
                         UnitsOnOrder = inMemoryProduct.UnitsOnOrder,
                     };
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
+
+                    await _bLService.AddOrUpdateProductAsync(product);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -158,8 +184,7 @@ namespace NorthWind.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.ProductId == id);
+            var product = await _bLService.GetProductDetailsAsync(id.Value);
             if (product == null)
             {
                 return NotFound();
@@ -173,9 +198,7 @@ namespace NorthWind.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Products.FindAsync(id);
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
+            await _bLService.DeleteProductAsync(id);
             return RedirectToAction(nameof(Index));
         }
 

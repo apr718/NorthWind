@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NorthWind.Data;
+using Models;
 using NorthWind.Models;
 
 namespace NorthWind.Controllers

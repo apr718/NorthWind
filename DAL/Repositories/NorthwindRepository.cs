@@ -25,35 +25,35 @@ namespace DAL.Repositories
         public async Task AddOrUpdateProductAsync(Product product)
         {
             var productDto = _entityBuilder.Map<Product, ProductDto>(product);
-            //var productDto = _entityBuilder.Map<Product, ProductDto>(product, (a, b) =>
-            //{
-            //    var category = _context.CategoriesCollection.FirstOrDefaultAsync(c => c.CategoryName == a.Category);
-            //    var supplier = _context.SuppliersCollection.FirstOrDefaultAsync(c => c.CompanyName == a.Supplier);
-            //    //todo:
-            //    b.CategoryID = category.Result.CategoryId;
-            //    b.SupplierID = supplier.Result.SupplierID;
-
-            //});
 
             if (product.ProductID != default(int))
             {
-                await _context.ProductsCollection.AddAsync(productDto);
+                _context.ProductsCollection.Update(productDto);
             }
             else
             {
-                //var previousVersion = await _context.ProductsCollection.FirstOrDefaultAsync(c => c.ProductID == product.ProductID);
-                throw new NotImplementedException("update");
+                 _context.ProductsCollection.Add(productDto);
             }
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
+        public async Task<IEnumerable<Category>> GetAllCategoriesAsync(int pageSize)
         {
-            return await _context.CategoriesCollection.Select(c => _entityBuilder.Map<CategoryDto, Category>(c)).ToListAsync();
+            if (pageSize == 0)
+            {
+                pageSize = int.MaxValue;
+            }
+            var catsCollection = await _context.CategoriesCollection.Take(pageSize).ToListAsync();
+            var result = catsCollection.Select(c => _entityBuilder.Map<CategoryDto, Category>(c));
+            return result;
         }
 
         public async Task<IEnumerable<Product>> GetAllProductsAsync(int pageSize)
         {
+            if (pageSize == 0)
+            {
+                pageSize = int.MaxValue;
+            }
             var joinedData = await _context.ProductsCollection
                 //.Include(p => p.Category)
                 //.Include(p => p.Supplier)
@@ -111,5 +111,43 @@ namespace DAL.Repositories
             var result =_context.ProductsCollection.Any(e => e.ProductID == id);
             return result;
         }
+
+        public async Task<Category> GetCategoryDetailsAsync(int id)
+        {
+            var category = await _context.CategoriesCollection.FirstOrDefaultAsync(m => m.CategoryId == id);
+
+            return _entityBuilder.Map<CategoryDto, Category>(category);
+        }
+
+        public async Task AddOrUpdateCategoryAsync(Category category)
+        {
+            var categoryDto = _entityBuilder.Map<Category, CategoryDto>(category);
+            if (category.CategoryId != default(int))
+            {
+                await _context.CategoriesCollection.AddAsync(categoryDto);
+            }
+            else
+            {
+                _context.CategoriesCollection.Update(categoryDto);
+            }
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteCategoryAsync(int id)
+        {
+            var categoryDto = new CategoryDto
+            {
+                CategoryId = id
+            };
+            _context.CategoriesCollection.Remove(categoryDto);
+            await _context.SaveChangesAsync();
+        }
+
+        public bool CategoryExist(int id)
+        {
+            var result = _context.ProductsCollection.Any(e => e.ProductID == id);
+            return result;
+        }
     }
+
 }

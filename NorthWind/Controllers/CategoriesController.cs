@@ -4,22 +4,28 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using NorthWind.Models;
+using Services.Interfaces;
+using UI.Services.Interfaces;
 
 namespace NorthWind.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly NorthWindDbContext _context;
+        private readonly IBLService _bLService;
+        private readonly IConfigurationService _configurationService;
 
-        public CategoriesController(NorthWindDbContext context)
+        public CategoriesController(IBLService bLService, IConfigurationService configurationService)
         {
-            _context = context;
+            _bLService = bLService;
+            _configurationService = configurationService;
         }
 
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Categories.ToListAsync());
+            int pageSize = _configurationService.PageSize;
+            var categories = await _bLService.GetAllCategoriesAsync(pageSize);
+            return View(categories);
         }
 
         // GET: Categories/Details/5
@@ -29,9 +35,9 @@ namespace NorthWind.Controllers
             {
                 return NotFound();
             }
+           
+            var category = await _bLService.GetCategoryDetailsAsync(id.Value);
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
             if (category == null)
             {
                 return NotFound();
@@ -55,8 +61,8 @@ namespace NorthWind.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
-                await _context.SaveChangesAsync();
+                await _bLService.AddOrUpdateCategoryAsync(category);
+
                 return RedirectToAction(nameof(Index));
             }
             return View(category);
@@ -69,8 +75,8 @@ namespace NorthWind.Controllers
             {
                 return NotFound();
             }
+            var category = await _bLService.GetCategoryDetailsAsync(id.Value);
 
-            var category = await _context.Categories.FindAsync(id);
             if (category == null)
             {
                 return NotFound();
@@ -85,7 +91,7 @@ namespace NorthWind.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName,Description")] Category category)
         {
-            if (id != category.CategoryID)
+            if (id != category.CategoryId)
             {
                 return NotFound();
             }
@@ -94,12 +100,11 @@ namespace NorthWind.Controllers
             {
                 try
                 {
-                    _context.Update(category);
-                    await _context.SaveChangesAsync();
+                    await _bLService.AddOrUpdateCategoryAsync(category);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CategoryID))
+                    if (!CategoryExists(category.CategoryId))
                     {
                         return NotFound();
                     }
@@ -121,8 +126,8 @@ namespace NorthWind.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
+            var category = await _bLService.GetCategoryDetailsAsync(id.Value);
+
             if (category == null)
             {
                 return NotFound();
@@ -136,15 +141,14 @@ namespace NorthWind.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+             await _bLService.DeleteCategoryAsync(id);
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool CategoryExists(int id)
         {
-            return _context.Categories.Any(e => e.CategoryID == id);
+            return _bLService.CategoryExist(id);
         }
     }
 }

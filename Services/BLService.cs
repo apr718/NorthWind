@@ -26,9 +26,9 @@ namespace Services
             await _northwindRepository.AddOrUpdateProductAsync(product);
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
+        public async Task<IEnumerable<Category>> GetAllCategoriesAsync(int pageSize)
         {
-            return await _northwindRepository.GetAllCategoriesAsync();
+            return await _northwindRepository.GetAllCategoriesAsync(pageSize);
         }
 
         public async Task<IEnumerable<Supplier>> GetAllSuppliersAsync()
@@ -36,9 +36,9 @@ namespace Services
             return await _northwindRepository.GetAllSuppliersAsync();
         }
 
-        public async Task<Product> GetProductDetailsAsync(int Id)
+        public async Task<Product> GetProductDetailsAsync(int id)
         {
-            return await _northwindRepository.GetProductDetailsAsync(Id);
+            return await _northwindRepository.GetProductDetailsAsync(id);
         }
 
         public async Task DeleteProductAsync(int id)
@@ -49,6 +49,26 @@ namespace Services
         public bool ProductExist(int id)
         {
             return _northwindRepository.ProductExist(id);
+        }
+
+        public async Task<Category> GetCategoryDetailsAsync(int id)
+        {
+            return await _northwindRepository.GetCategoryDetailsAsync(id);
+        }
+
+        public async Task AddOrUpdateCategoryAsync(Category category)
+        {
+            await _northwindRepository.AddOrUpdateCategoryAsync(category);
+        }
+
+        public async Task DeleteCategoryAsync(int id)
+        {
+            await _northwindRepository.DeleteCategoryAsync(id);
+        }
+
+        public bool CategoryExist(int id)
+        {
+            return _northwindRepository.CategoryExist(id);
         }
     }
 }

@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using DAL.Context;
+using DAL.Mapper;
+using DAL.Mapper.Interfaces;
+using DAL.Repositories;
+using DAL.Repositories.Interfaces;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -7,8 +12,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NorthWind.Data;
 using NorthWind.Services;
+using Services;
+using Services.Interfaces;
+using UI.Services;
+using UI.Services.Interfaces;
 
 namespace NorthWind
 {
@@ -24,9 +32,19 @@ namespace NorthWind
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
-            services.AddDbContext<NorthWindDbContext>(
-                options => options.UseSqlServer(_configuration.GetConnectionString("NorthWind")));
-            services.AddScoped<ICategoryData, SqlCategoriesData>();
+            //services.AddDbContext<NorthWindDbContext>(
+            //    options => options.UseSqlServer(_configuration.GetConnectionString("NorthWind")));
+            //services.AddScoped<ICategoryData, SqlCategoriesData>();
+
+            services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(_configuration.GetConnectionString("NorthWind")), ServiceLifetime.Singleton);
+
+            services.AddScoped<INorthwindRepository, NorthwindRepository>();
+            services.AddScoped<IBLService, BLService>();
+            services.AddSingleton<IEntityBuilder, EntityBuilder>();
+            services.AddSingleton<IConfigurationService, ConfigurationService>();
+
+            services.AddMvc();
+
 
             services.Configure<CookiePolicyOptions>(options =>
             {

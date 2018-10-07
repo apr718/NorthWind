@@ -12,7 +12,7 @@ namespace NorthWind.Controllers
 {
     public class ProductsController : Controller
     {
-        //private readonly NorthWindDbContext _context;
+        
         private readonly IBLService _bLService;
         private readonly IConfigurationService _configurationService;
 
@@ -51,7 +51,7 @@ namespace NorthWind.Controllers
         // GET: Products/Create
         public async Task<IActionResult> Create()
         {
-            var cats = await _bLService.GetAllCategoriesAsync();
+            var cats = await _bLService.GetAllCategoriesAsync(0);
             var suppls = await _bLService.GetAllSuppliersAsync();
 
             var inMemory = new InMemoryProductData
@@ -110,7 +110,7 @@ namespace NorthWind.Controllers
                 return NotFound();
             }
             var vm = new InMemoryProductData {
-                Categories = (List<Category>) await _bLService.GetAllCategoriesAsync(),
+                Categories = (List<Category>) await _bLService.GetAllCategoriesAsync(0),
                 Suppliers = (List<Supplier>) await _bLService.GetAllSuppliersAsync(),
                 SelectedCategoryId = product.CategoryID,
                 SelectedSupplierId = product.SupplierID,
@@ -204,7 +204,7 @@ namespace NorthWind.Controllers
 
         private bool ProductExists(int id)
         {
-            return _context.Products.Any(e => e.ProductId == id);
+            return _bLService.ProductExist(id);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model NorthWind.Models.Product
+﻿@model Models.Product
 
 @{
     ViewData["Title"] = "Details";
@@ -17,10 +17,10 @@
             @Html.DisplayFor(model => model.ProductName)
         </dd>
         <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
+            @Html.DisplayFor(model => model.CategoryName)
         </dd>
         <dd>
-            @Html.DisplayFor(model => model.Supplier.CompanyName)
+            @Html.DisplayFor(model => model.SupplierName)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.QuantityPerUnit)
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ProductId">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.ProductID">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

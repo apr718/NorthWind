@@ -60,8 +60,8 @@ namespace NorthWind.Controllers
                 Suppliers = new List<Supplier>()
             };
 
-            inMemory.Categories = (List<Category>) cats;
-            inMemory.Suppliers = (List<Supplier>) suppls;
+            inMemory.Categories = cats;
+            inMemory.Suppliers = suppls;
             
             return View(inMemory);
         }
@@ -110,8 +110,8 @@ namespace NorthWind.Controllers
                 return NotFound();
             }
             var vm = new InMemoryProductData {
-                Categories = (List<Category>) await _bLService.GetAllCategoriesAsync(0),
-                Suppliers = (List<Supplier>) await _bLService.GetAllSuppliersAsync(),
+                Categories = await _bLService.GetAllCategoriesAsync(0),
+                Suppliers = await _bLService.GetAllSuppliersAsync(),
                 SelectedCategoryId = product.CategoryID,
                 SelectedSupplierId = product.SupplierID,
                 ProductId = product.ProductID,

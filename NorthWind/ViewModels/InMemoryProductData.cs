@@ -10,8 +10,8 @@ namespace NorthWind.ViewModels
         public int ProductId { get; set; }
         [Required, MaxLength(40)]
         public string ProductName { get; set; }
-        public List<Supplier> Suppliers { get; set; }
-        public List<Category> Categories { get; set; }
+        public IEnumerable<Supplier> Suppliers { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
         [Required]
         public int? SelectedSupplierId { get; set; }
         [Required]

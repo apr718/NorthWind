@@ -6,3 +6,4 @@ E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfoIn
 E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfo.cs
 E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.dll
 E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.pdb
+E:\Projects\Core\NorthWind2\Models\obj\Debug\netcoreapp2.1\Models.csprojAssemblyReference.cache

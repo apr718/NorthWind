@@ -82,7 +82,7 @@ using NorthWind.Models;
             ");
             EndContext();
             BeginContext(587, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7116cba79bf4af383152a84f1f8198a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81c6ec676a1b4f98b98ee42ea86f978b", async() => {
                 BeginContext(664, 9, true);
                 WriteLiteral("NorthWind");
                 EndContext();
@@ -109,7 +109,7 @@ using NorthWind.Models;
             WriteLiteral("\r\n        </div>\r\n        <div class=\"navbar-collapse collapse\">\r\n            <ul class=\"nav navbar-nav\">\r\n                <li>");
             EndContext();
             BeginContext(804, 76, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8cfe797f82dd482fadbe294632281520", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e1fe8035a84486d9f6500d7cc3843c8", async() => {
                 BeginContext(866, 10, true);
                 WriteLiteral("Categories");
                 EndContext();
@@ -135,7 +135,7 @@ using NorthWind.Models;
             WriteLiteral("</li>\r\n                <li>");
             EndContext();
             BeginContext(907, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "55ff368f19a54bd685a4c6ec513d0f23", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a0854f455334bfe83c9660c7c9c6643", async() => {
                 BeginContext(967, 8, true);
                 WriteLiteral("Products");
                 EndContext();
@@ -161,7 +161,7 @@ using NorthWind.Models;
             WriteLiteral("</li>\r\n                <li>");
             EndContext();
             BeginContext(1006, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a54408adf14448d38817d3b4554e0056", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbbb421c73cd48f1b8da82caad0186a0", async() => {
                 BeginContext(1062, 5, true);
                 WriteLiteral("About");
                 EndContext();
@@ -187,7 +187,7 @@ using NorthWind.Models;
             WriteLiteral("</li>\r\n                <li>");
             EndContext();
             BeginContext(1098, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c653b1adcc44efbb8512c25566e1947", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cd3f0947a0654166b1814424aab104dd", async() => {
                 BeginContext(1156, 7, true);
                 WriteLiteral("Contact");
                 EndContext();
@@ -213,7 +213,7 @@ using NorthWind.Models;
             WriteLiteral("</li>\r\n                <li>");
             EndContext();
             BeginContext(1194, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01712b92ea6f415c920722da5f47753a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aaeb35c602b04cee9e85e4a34c1c3ceb", async() => {
                 BeginContext(1252, 7, true);
                 WriteLiteral("Privacy");
                 EndContext();

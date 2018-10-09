@@ -28,7 +28,16 @@ namespace DAL.Repositories
 
             if (product.ProductID != default(int))
             {
-                _context.ProductsCollection.Update(productDto);
+                var previous = await _context.ProductsCollection.FirstAsync(c => c.ProductID == product.ProductID);
+                previous.CategoryID = product.CategoryID;
+                previous.Discontinued = product.Discontinued;
+                previous.ProductName = product.ProductName;
+                previous.QuantityPerUnit = product.QuantityPerUnit;
+                previous.ReorderLevel = product.ReorderLevel;
+                previous.SupplierID = product.SupplierID;
+                previous.UnitPrice = product.UnitPrice;
+                previous.UnitsInStock = product.UnitsInStock;
+                previous.UnitsOnOrder = product.UnitsOnOrder;
             }
             else
             {

@@ -6,29 +6,29 @@
 
 <!--Navbar-->
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<hr/>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">NorthWind</a>
         </div>
-        <div class="navbar-collapse collapse">
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
                 <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
             </ul>
         </div>
     </div>
 </nav>
-
-<!--/.Navbar-->
 <p></p>
 <p>Hello from our NorthWind company!</p>

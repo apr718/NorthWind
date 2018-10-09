@@ -1,0 +1,801 @@
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request finished in 821.6607ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7678ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 227.1259ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 410.2567ms
+Request finished in 1891.2538ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/Products  
+Route matched with {action = "Index", controller = "Products"}. Executing action NorthWind.Controllers.ProductsController.Index (NorthWind)
+Executing action method NorthWind.Controllers.ProductsController.Index (NorthWind) - Validation state: Valid
+No type was specified for the decimal column 'Discount' on entity type 'OrderDetailDto'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+No type was specified for the decimal column 'UnitPrice' on entity type 'OrderDetailDto'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+No type was specified for the decimal column 'Freight' on entity type 'OrderDto'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+No type was specified for the decimal column 'UnitPrice' on entity type 'ProductDto'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+Entity Framework Core 2.1.3-rtm-32065 initialized 'NorthwindContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Query: '(from ProductDto x1 in DbSet<ProductDto> join CategoryDto b in DbSet<CategoryDto> on [x1].CategoryID...' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+Executed DbCommand (331ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_0) [x1].[ProductID], [x1].[CategoryID], [x1].[Discontinued], [x1].[ProductName], [x1].[QuantityPerUnit], [x1].[ReorderLevel], [x1].[SupplierID], [x1].[UnitPrice], [x1].[UnitsInStock], [x1].[UnitsOnOrder], [b].[CategoryId], [b].[CategoryName], [b].[Description], [b].[Picture], [b0].[SupplierID], [b0].[Address], [b0].[City], [b0].[CompanyName], [b0].[ContactName], [b0].[ContactTitle], [b0].[Country], [b0].[Fax], [b0].[HomePage], [b0].[Phone], [b0].[PostalCode], [b0].[Region]
+FROM [Products] AS [x1]
+INNER JOIN [Categories] AS [b] ON [x1].[CategoryID] = [b].[CategoryId]
+INNER JOIN [Suppliers] AS [b0] ON [x1].[SupplierID] = [b0].[SupplierID]
+Executed action method NorthWind.Controllers.ProductsController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6865.4654ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 399.8683ms.
+Executed action NorthWind.Controllers.ProductsController.Index (NorthWind) in 7718.3011ms
+Request finished in 7762.0567ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0295ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.9069ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 54.0847ms
+Request finished in 112.2819ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request finished in 34.3803ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7399ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 140.0374ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 172.2846ms
+Request finished in 371.3901ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request finished in 39.1748ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7274ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 138.3548ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 168.0672ms
+Request finished in 369.7688ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request finished in 30.8096ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9574ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 159.9178ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 256.6676ms
+Request finished in 681.0594ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0615ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 6.0693ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 18.4046ms
+Request finished in 36.3147ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0147ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.5232ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 17.1063ms
+Request finished in 42.6859ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0169ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 5.5324ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 39.9234ms
+Request finished in 112.4477ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.015ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 6.7781ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 19.7258ms
+Request finished in 47.1012ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0173ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.9026ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 58.7883ms
+Request finished in 88.1758ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.758ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 11.2653ms
+Request finished in 24.4791ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.016ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.5801ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.1968ms
+Request finished in 33.7963ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0445ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 6.663ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 23.5009ms
+Request finished in 59.3365ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0182ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.5339ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.7043ms
+Request finished in 20.3858ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0198ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.7625ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.5465ms
+Request finished in 21.3763ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request finished in 43.056ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6584ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 186.1328ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 223.3364ms
+Request finished in 558.3653ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0776ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 5.4637ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 21.9373ms
+Request finished in 81.4175ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0147ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.9344ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.61ms
+Request finished in 33.9554ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.5348ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 71.4851ms
+Request finished in 171.8695ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0192ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 39.3226ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 160.5879ms
+Request finished in 211.4046ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.9608ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 55.9982ms
+Request finished in 145.0525ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.0332ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 30.6293ms
+Request finished in 108.4029ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.6663ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.8987ms
+Request finished in 26.0491ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.6384ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 11.1248ms
+Request finished in 23.2828ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0176ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.9443ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.4221ms
+Request finished in 24.3922ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.4255ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 23.7998ms
+Request finished in 50.8795ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.936ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 30.2216ms
+Request finished in 45.1344ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 6.5203ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 23.2731ms
+Request finished in 52.4595ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0153ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.5557ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.3437ms
+Request finished in 93.2598ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0153ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 8.2128ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 44.4724ms
+Request finished in 78.5863ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.2132ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 67.9881ms
+Request finished in 98.1206ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0211ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 19.4031ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 81.2218ms
+Request finished in 154.8293ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0186ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 9.5506ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 42.0967ms
+Request finished in 113.6159ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0734ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 5.2793ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 21.2878ms
+Request finished in 57.7536ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request finished in 35.2791ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7437ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 130.5849ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 177.3378ms
+Request finished in 481.941ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1395ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 19.5327ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 65.1691ms
+Request finished in 103.3419ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0631ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.829ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 12.63ms
+Request finished in 25.1354ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.613ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.9452ms
+Request finished in 21.6226ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.7169ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 16.6781ms
+Request finished in 51.5608ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.024ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 5.3999ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 46.4264ms
+Request finished in 69.2162ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.7494ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.4322ms
+Request finished in 37.5566ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.5925ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.5708ms
+Request finished in 22.3536ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0179ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.3616ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 11.3262ms
+Request finished in 23.6118ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 5.4913ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.1732ms
+Request finished in 27.2917ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.015ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.6438ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.7197ms
+Request finished in 33.8531ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 23.3328ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 77.083ms
+Request finished in 175.3217ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request finished in 202.0197ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4.9243ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 148.0489ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 188.9297ms
+Request finished in 729.2505ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0959ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.5102ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 11.5979ms
+Request finished in 24.0679ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.2279ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.1517ms
+Request finished in 41.3818ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0153ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.9726ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.7606ms
+Request finished in 134.3388ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0163ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 41.7683ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 200.585ms
+Request finished in 313.232ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0638ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.2349ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 54.9433ms
+Request finished in 79.1963ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0186ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 21.1976ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 75.919ms
+Request finished in 156.5744ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.016ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.1349ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.271ms
+Request finished in 65.3654ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 7.0322ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 25.237ms
+Request finished in 55.1806ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request finished in 194.7466ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9102ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 215.4269ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 288.8433ms
+Request finished in 699.0936ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0853ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 7.3282ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 52.9624ms
+Request finished in 110.9989ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0205ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.3721ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 12.4979ms
+Request finished in 30.5148ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.6568ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 23.9284ms
+Request finished in 57.7956ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.6702ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.9399ms
+Request finished in 35.0087ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0182ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 9.9073ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 124.3295ms
+Request finished in 193.5124ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0153ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.9717ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 17.716ms
+Request finished in 29.9038ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0182ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.5605ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 63.4961ms
+Request finished in 76.3729ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 13.2542ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 171.3977ms
+Request finished in 278.8901ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0176ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.2923ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 16.8474ms
+Request finished in 61.1406ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0186ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.3753ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 10.8365ms
+Request finished in 36.4443ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0602ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 7.2089ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 28.5243ms
+Request finished in 74.6729ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0157ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 5.0218ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 16.1835ms
+Request finished in 29.3479ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0189ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.7173ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 18.0582ms
+Request finished in 45.6662ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.016ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 11.0651ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 62.26ms
+Request finished in 113.0244ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0173ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 11.3682ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 82.9461ms
+Request finished in 130.5188ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0599ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.0082ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 23.49ms
+Request finished in 61.0909ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0166ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.4339ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 67.9207ms
+Request finished in 116.914ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0346ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.0041ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 88.7589ms
+Request finished in 157.0879ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0195ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 35.5677ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 58.6145ms
+Request finished in 93.1844ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0169ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.7865ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 19.5667ms
+Request finished in 36.5983ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0548ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.3401ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.0093ms
+Request finished in 91.3023ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.015ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.7062ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 85.6608ms
+Request finished in 130.3174ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0176ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 6.027ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 108.0453ms
+Request finished in 163.6185ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0202ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.9316ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.5818ms
+Request finished in 94.4414ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0198ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.7593ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 15.0186ms
+Request finished in 43.5593ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0153ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 4.3299ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 18.2603ms
+Request finished in 27.8754ms 200 text/html; charset=utf-8
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request finished in 35.2906ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.712ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 153.8023ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 186.9802ms
+Request finished in 376.8725ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/js/site.js?v=YaguoAvghf2ciIBcBgvH1sxT8ssQOCtINnEayTDKbcY  
+Sending file. Request path: '/js/site.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\js\site.js'
+Request finished in 25.3377ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.8543ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 13.6814ms
+Request finished in 26.6701ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44371/js/site.js?v=YaguoAvghf2ciIBcBgvH1sxT8ssQOCtINnEayTDKbcY  
+Request starting HTTP/1.1 GET http://localhost:44371/lib/bootstrap/dist/css/bootstrap.css  
+Request starting HTTP/1.1 GET http://localhost:44371/css/site.css  
+Request starting HTTP/1.1 GET http://localhost:44371/lib/bootstrap/dist/js/bootstrap.js  
+Sending file. Request path: '/css/site.css'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\css\site.css'
+Sending file. Request path: '/js/site.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\js\site.js'
+Request finished in 48.795ms 200 text/css
+Request finished in 65.0139ms 200 application/javascript
+Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+Request finished in 116.9368ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 127.6187ms 200 text/css
+Request finished in 160.9131ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44371/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\favicon.ico'
+Request finished in 14.6205ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0153ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.782ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 18.0727ms
+Request starting HTTP/1.1 GET http://localhost:44371/js/site.js?v=YaguoAvghf2ciIBcBgvH1sxT8ssQOCtINnEayTDKbcY  
+Request starting HTTP/1.1 GET http://localhost:44371/css/site.css  
+Request finished in 78.9202ms 200 text/html; charset=utf-8
+The file /css/site.css was not modified
+The file /js/site.js was not modified
+Request finished in 28.3556ms 304 text/css
+Request finished in 36.2634ms 304 application/javascript
+Start application. Folder: E:\Projects\Core\NorthWind2\NorthWind
+Development
+Request starting HTTP/1.1 DEBUG http://localhost:56416/  0
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Request finished in 33.2007ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6677ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 113.9488ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 149.1532ms
+Request finished in 375.4799ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/css/site.css  
+Sending file. Request path: '/css/site.css'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\css\site.css'
+Request finished in 36.7067ms 200 text/css
+Request starting HTTP/1.1 GET http://localhost:44371/js/site.js?v=YaguoAvghf2ciIBcBgvH1sxT8ssQOCtINnEayTDKbcY  
+The file /js/site.js was not modified
+Request finished in 14.2494ms 304 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44371/  
+Route matched with {action = "Index", controller = "Home"}. Executing action NorthWind.Controllers.HomeController.Index (NorthWind)
+Executing action method NorthWind.Controllers.HomeController.Index (NorthWind) - Validation state: Valid
+Executed action method NorthWind.Controllers.HomeController.Index (NorthWind), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2575ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 11.5161ms.
+Executed action NorthWind.Controllers.HomeController.Index (NorthWind) in 22.1165ms
+Request finished in 59.9555ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44371/lib/bootstrap/dist/js/bootstrap.js  
+Request starting HTTP/1.1 GET http://localhost:44371/js/site.js?v=YaguoAvghf2ciIBcBgvH1sxT8ssQOCtINnEayTDKbcY  
+Request starting HTTP/1.1 GET http://localhost:44371/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44371/css/site.css  
+Sending file. Request path: '/js/site.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\js\site.js'
+Request finished in 28.9268ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44371/lib/bootstrap/dist/css/bootstrap.css  
+Sending file. Request path: '/css/site.css'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\css\site.css'
+Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+Request finished in 58.9291ms 200 text/css
+Request finished in 73.9782ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\lib\jquery\dist\jquery.js'
+Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'E:\Projects\Core\NorthWind2\NorthWind\wwwroot\lib\bootstrap\dist\css\bootstrap.css'

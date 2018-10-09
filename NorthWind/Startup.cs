@@ -1,4 +1,5 @@
-﻿using DAL.Context;
+﻿using System.IO;
+using DAL.Context;
 using DAL.Mapper;
 using DAL.Mapper.Interfaces;
 using DAL.Repositories;
@@ -12,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NorthWind.Extensions;
 using NorthWind.Services;
 using Services;
 using Services.Interfaces;
@@ -61,8 +63,8 @@ namespace NorthWind
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, 
                               IHostingEnvironment env,
-                              IGreeter greeter, 
-                              ILogger<Startup> logger)
+                              IGreeter greeter,
+                              ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -71,9 +73,13 @@ namespace NorthWind
             }
             else
             {
-                app.UseExceptionHandler("/Error/Error");
+                app.UseExceptionHandler($"/Error/Error");
                 app.UseHsts();
             }
+
+            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
+            var logger = loggerFactory.CreateLogger("FileLogger");
+            logger.LogInformation("Start application. Folder: {0}", Directory.GetCurrentDirectory());
 
             logger.Log(LogLevel.Information, env.EnvironmentName);
 

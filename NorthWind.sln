@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind", "NorthWind\NorthWind.csproj", "{4AD98E21-A7B0-4DB5-8C53-FA70E81B6FA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{DCEB9317-2599-462A-90AF-34E625BBE79C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{DCEB9317-2599-462A-90AF-34E625BBE79C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{4D780575-038F-4F60-8AF6-B04B45CC6871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{4D780575-038F-4F60-8AF6-B04B45CC6871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{99D8E45F-2C7B-4C71-BC69-6985DDAD544D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{99D8E45F-2C7B-4C71-BC69-6985DDAD544D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{A892213B-1700-4D2D-8E61-A0A851E43F04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{99D8E45F-2C7B-4C71-BC69-6985DDAD544D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99D8E45F-2C7B-4C71-BC69-6985DDAD544D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99D8E45F-2C7B-4C71-BC69-6985DDAD544D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

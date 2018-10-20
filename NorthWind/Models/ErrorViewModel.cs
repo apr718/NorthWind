@@ -1,5 +1,3 @@
-using System;
-
 namespace NorthWind.Models
 {
     public class ErrorViewModel

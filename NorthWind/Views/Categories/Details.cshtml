@@ -22,6 +22,12 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+        <dd>
+            <img src='@Url.Action("RenderImage", new { categoryId = Model.CategoryId })' width="100px" height="80px" alt="" />
+        </dd>
     </dl>
 </div>
 <div>

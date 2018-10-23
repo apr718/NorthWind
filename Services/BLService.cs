@@ -70,5 +70,10 @@ namespace Services
         {
             return _northwindRepository.CategoryExist(id);
         }
+
+        public byte[] CategryImage(int id)
+        {
+            return _northwindRepository.GetCategoryImage(id);
+        }
     }
 }

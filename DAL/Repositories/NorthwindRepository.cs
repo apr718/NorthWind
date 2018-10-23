@@ -157,6 +157,12 @@ namespace DAL.Repositories
             var result = _context.ProductsCollection.Any(e => e.ProductID == id);
             return result;
         }
+
+        public byte[] GetCategoryImage(int id)
+        {
+            var result = _context.CategoriesCollection.Find(id);
+            return result.Picture;
+        }
     }
 
 }

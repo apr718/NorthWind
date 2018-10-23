@@ -17,5 +17,6 @@ namespace Services.Interfaces
         Task AddOrUpdateCategoryAsync(Category category);
         Task DeleteCategoryAsync(int id);
         bool CategoryExist(int id);
+        byte[] CategryImage(int id);
     }
 }

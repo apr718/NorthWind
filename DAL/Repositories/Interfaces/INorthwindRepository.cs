@@ -17,6 +17,6 @@ namespace DAL.Repositories.Interfaces
         Task AddOrUpdateCategoryAsync(Category category);
         Task DeleteCategoryAsync(int id);
         bool CategoryExist(int id);
-
+        byte[] GetCategoryImage(int id);
     }
 }

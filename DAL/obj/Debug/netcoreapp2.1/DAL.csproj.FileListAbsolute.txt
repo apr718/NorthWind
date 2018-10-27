@@ -12,3 +12,5 @@ E:\Projects\Core\NorthWind2\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfo.cs
 E:\Projects\Core\NorthWind2\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
 E:\Projects\Core\NorthWind2\DAL\obj\Debug\netcoreapp2.1\DAL.dll
 E:\Projects\Core\NorthWind2\DAL\obj\Debug\netcoreapp2.1\DAL.pdb
+E:\Projects\Core\NorthWind2\DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+E:\Projects\Core\NorthWind2\DAL\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml

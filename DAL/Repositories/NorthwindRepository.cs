@@ -133,11 +133,14 @@ namespace DAL.Repositories
             var categoryDto = _entityBuilder.Map<Category, CategoryDto>(category);
             if (category.CategoryId != default(int))
             {
-                await _context.CategoriesCollection.AddAsync(categoryDto);
+                var previous = await _context.CategoriesCollection.FirstAsync(c => c.CategoryId == category.CategoryId);
+                previous.CategoryName = category.CategoryName;
+                previous.Description = category.Description;
+                previous.Picture = category.Picture;
             }
             else
             {
-                _context.CategoriesCollection.Update(categoryDto);
+                await _context.CategoriesCollection.AddAsync(categoryDto);
             }
             await _context.SaveChangesAsync();
         }

@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
@@ -157,9 +154,17 @@ namespace NorthWind.Controllers
         {
             using (MemoryStream ms = new MemoryStream())
             {
-                byte[] image = _bLService.CategryImage(categoryId); 
+                byte[] image = _bLService.CategryImage(categoryId);
 
-                ms.Write(image, 78, image.Length - 78);
+                if (categoryId == 2)
+                {
+                    ms.Write(image);
+                }
+                else
+                {
+                    ms.Write(image, 78, image.Length - 78);
+                }
+                
 
                 return File(ms.ToArray(), "image/jpeg");
             }

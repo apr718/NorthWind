@@ -28,6 +28,9 @@
         <dd>
             <img src='@Url.Action("RenderImage", new { categoryId = Model.CategoryId })' width="100px" height="80px" alt="" />
         </dd>
+        <dd>
+            <a href="@Url.Action("Index", "UploadFiles", new { categoryId = Model.CategoryId, categoryName = Model.CategoryName, description = Model.Description })">Upload new image file</a>
+        </dd>
     </dl>
 </div>
 <div>

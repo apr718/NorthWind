@@ -45,14 +45,14 @@ namespace NorthWind.Middelware
             
 
             var isImage = route.ToUriComponent().Contains("images");
-
+            
+            
             if (isImage)
             {
+                var destPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath;
                 var categoryId = uri.Substring(8);
-                if (!File.Exists(Path.Combine(CacheDirectoryPath, categoryId + ".bmp")))
+                if (!File.Exists(destPath + $"{categoryId}.bmp"))
                 {
-                    var destPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath;
-
                     var originalBodyStream = context.Response.Body;
 
                     using (var responseBody = new MemoryStream())
@@ -72,6 +72,12 @@ namespace NorthWind.Middelware
 
                         img.Save(destPath + $"{categoryId}.bmp", ImageFormat.Bmp);
                     }
+                }
+                else
+                {
+                        byte[] imgdata = File.ReadAllBytes(destPath + $"{categoryId}.bmp");
+
+                        await context.Response.Body.WriteAsync(imgdata, 0, imgdata.Length);
                 }
             }
             else

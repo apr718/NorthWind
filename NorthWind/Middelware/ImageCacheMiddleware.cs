@@ -19,7 +19,10 @@ namespace NorthWind.Middelware
     {
         private readonly RequestDelegate _nextDelegate;
         private readonly IImageCacheOptions<ImageCacheOptions> _cashe;
-        private const string CacheDirectoryPath = @"\AspNetCore\categoryId";
+        private const string CacheDirectoryPath = @"\AspNetCore\";
+        private const string ImageFileName = @"categoryId";
+        private const int MaxCountOfCachingImages = 3;
+        private const int CacheTimeMinute = 3;
 
         public ImageCacheMiddleware(RequestDelegate next)
         {
@@ -49,7 +52,7 @@ namespace NorthWind.Middelware
             
             if (isImage)
             {
-                var destPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath;
+                var destPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath + ImageFileName;
                 var categoryId = uri.Substring(8);
                 if (!File.Exists(destPath + $"{categoryId}.bmp"))
                 {
@@ -70,6 +73,31 @@ namespace NorthWind.Middelware
 
                         var img = Image.FromStream(context.Response.Body);
 
+                        DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath);
+                        var files = dir.GetFiles();
+                        
+
+                        foreach (FileInfo fi in files)
+                        {
+                            var creationTime = fi.CreationTime;
+
+                            if (creationTime < (DateTime.Now - new TimeSpan(0, 0, CacheTimeMinute, 0)))
+                            {
+                                fi.Delete();
+                            }
+                        }
+
+                        files = dir.GetFiles();
+
+                        int imageCount = files.Length;
+                        if (imageCount > MaxCountOfCachingImages)
+                        {
+                            var delCount = imageCount - MaxCountOfCachingImages;
+                            for (int i = 0; i < delCount; i++)
+                            {
+                               files[i].Delete();
+                            }
+                        }
                         img.Save(destPath + $"{categoryId}.bmp", ImageFormat.Bmp);
                     }
                 }

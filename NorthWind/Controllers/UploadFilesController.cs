@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using NorthWind.Services.Interfaces;
 using Services.Interfaces;
-using UI.Services.Interfaces;
 
 namespace NorthWind.Controllers
 {

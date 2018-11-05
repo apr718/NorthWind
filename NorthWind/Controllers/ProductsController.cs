@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using NorthWind.Services.Interfaces;
 using NorthWind.ViewModels;
 using Services.Interfaces;
-using UI.Services.Interfaces;
 
 namespace NorthWind.Controllers
 {

@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Models;
 using Moq;
 using NorthWind.Controllers;
+using NorthWind.Services.Interfaces;
 using NorthWind.ViewModels;
 using Services.Interfaces;
-using UI.Services.Interfaces;
 using Xunit;
 
 namespace Test.Controller

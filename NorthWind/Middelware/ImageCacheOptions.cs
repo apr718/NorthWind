@@ -6,5 +6,6 @@
         public string ImageFileName { get; set; }
         public int MaxCountOfCachingImages { get; set; }
         public int CacheTimeMinute { get; set; }
+
     }
 }

@@ -102,7 +102,6 @@ namespace NorthWind.Middelware
             {
                 await _nextDelegate.Invoke(context);
             }
-            
         }
     }
 }

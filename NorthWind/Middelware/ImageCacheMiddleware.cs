@@ -4,23 +4,21 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 
 namespace NorthWind.Middelware
 {
     public class ImageCacheMiddleware
     {
         private readonly RequestDelegate _nextDelegate;
-        private readonly IImageCacheOptions<ImageCacheOptions> _cashe;
-        private const string CacheDirectoryPath = @"\AspNetCore\";
-        private const string ImageFileName = @"categoryId";
-        private const int MaxCountOfCachingImages = 3;
-        private const int CacheTimeMinute = 3;
 
-        public ImageCacheMiddleware(RequestDelegate next)
+        public ImageCacheMiddleware(RequestDelegate next, IOptions<ImageCache> options)
         {
             _nextDelegate = next;
-            //_cashe = cache;
+            ImageCache = options.Value;
         }
+
+        public ImageCache ImageCache { get; }
 
         private async Task<string> FormatResponse(HttpResponse response)
         {
@@ -44,7 +42,7 @@ namespace NorthWind.Middelware
             
             if (isImage)
             {
-                var destPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath + ImageFileName;
+                var destPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + ImageCache?.CacheDirectoryPath + ImageCache?.ImageFileName;
                 var categoryId = uri.Substring(8);
                 if (!File.Exists(destPath + $"{categoryId}.bmp"))
                 {
@@ -65,7 +63,7 @@ namespace NorthWind.Middelware
 
                         var img = Image.FromStream(context.Response.Body);
 
-                        DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + CacheDirectoryPath);
+                        DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + ImageCache?.CacheDirectoryPath);
                         var files = dir.GetFiles();
                         
 
@@ -73,7 +71,7 @@ namespace NorthWind.Middelware
                         {
                             var creationTime = fi.CreationTime;
 
-                            if (creationTime < (DateTime.Now - new TimeSpan(0, 0, CacheTimeMinute, 0)))
+                            if (ImageCache?.CacheTimeMinute != null && creationTime < (DateTime.Now - new TimeSpan(0, 0, (int) ImageCache?.CacheTimeMinute, 0)))
                             {
                                 fi.Delete();
                             }
@@ -82,9 +80,9 @@ namespace NorthWind.Middelware
                         files = dir.GetFiles();
 
                         int imageCount = files.Length;
-                        if (imageCount > MaxCountOfCachingImages)
+                        if (imageCount > ImageCache?.MaxCountOfCachingImages)
                         {
-                            var delCount = imageCount - MaxCountOfCachingImages;
+                            var delCount = imageCount - ImageCache?.MaxCountOfCachingImages;
                             for (int i = 0; i < delCount; i++)
                             {
                                files[i].Delete();

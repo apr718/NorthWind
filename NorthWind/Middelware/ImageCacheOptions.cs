@@ -1,18 +1,10 @@
-﻿using System;
-
-namespace NorthWind.Middelware
+﻿namespace NorthWind.Middelware
 {
-    public interface IImageCacheOptions
+    public class ImageCache
     {
-        string DirPath { get; set; }
-        int MaxCount { get; set; }
-        DateTime CacheTime { get; set; }
-    }
-
-    public class ImageCacheOptions : IImageCacheOptions
-    {
-        public string DirPath  { get; set; }
-        public int MaxCount { get; set; }
-        public DateTime CacheTime { get; set; }
+        public string CacheDirectoryPath { get; set; }
+        public string ImageFileName { get; set; }
+        public int MaxCountOfCachingImages { get; set; }
+        public int CacheTimeMinute { get; set; }
     }
 }

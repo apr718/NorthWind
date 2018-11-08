@@ -1,4 +1,4 @@
-﻿namespace NorthWind.Middelware
+﻿namespace NorthWind.Extensions
 {
     public class ImageCache
     {

@@ -15,6 +15,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using NorthWind.Extensions;
 using NorthWind.Middelware;
 using NorthWind.Services;
@@ -67,7 +68,8 @@ namespace NorthWind
                               IHostingEnvironment env,
                               IGreeter greeter,
                               ILoggerFactory loggerFactory,
-                              IMemoryCache memoryCache)
+                              IMemoryCache memoryCache,
+                              IOptions<LogOptions> options)
         {
    
 
@@ -86,7 +88,7 @@ namespace NorthWind
 
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
             var logger = loggerFactory.CreateLogger("FileLogger");
-            //logger.IsEnabled(Configuration.GetSection("Logging"));
+            if (options.Value?.LoggingEnabled != null) logger.IsEnabled((LogLevel) options.Value?.LoggingEnabled);
             logger.LogInformation("Start application. Folder: {0}", Directory.GetCurrentDirectory());
             
             logger.Log(LogLevel.Information, env.EnvironmentName);

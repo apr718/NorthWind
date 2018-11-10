@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace NorthWind.Extensions
+namespace NorthWind.Options
 {
     public class LogOptions
     {

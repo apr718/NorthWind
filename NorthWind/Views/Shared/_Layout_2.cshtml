@@ -44,17 +44,8 @@
         @RenderBody()
         <hr />
         <footer>
-            @if (IsSectionDefined(name: "CustomSection"))
-            {
-                // In layout pages, renders the content of a named section and specifies whether
-                // the section is required.
-                @RenderSection(name: "CustomSection")
-
-            }
-
-                <p>&copy; 2018 - NorthWind</p>
-
-            
+            <img src="~/images/Autotrader.png" />
+            <p>&copy; 2018 - NorthWind</p>
         </footer>
     </div>
 
@@ -83,6 +74,6 @@
         <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
     </environment>
 
-    @RenderSection("Scripts", required: false)
+   
 </body>
 </html>

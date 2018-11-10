@@ -25,23 +25,28 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <img src='@Url.Action("RenderImage", new { categoryId = item.CategoryId })' width="100px" height="80px" alt="" />
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <img src='@Url.Action("RenderImage", new { categoryId = item.CategoryId })' width="100px" height="80px" alt="" />
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@section CustomSection {
+    <p><b>You cannot modify Categories here!</b></p>
+}

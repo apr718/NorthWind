@@ -26,4 +26,10 @@
     <Folder Include="Data\" />
     <Folder Include="Services\Interfaces\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\_Layout_2.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
 </Project>

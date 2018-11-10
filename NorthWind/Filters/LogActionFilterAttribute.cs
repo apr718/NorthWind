@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 
-namespace NorthWind.Extensions
+namespace NorthWind.Filters
 {
-    public class SampleActionFilterAttribute : TypeFilterAttribute
+    public class LogActionFilterAttribute : TypeFilterAttribute
     {
-        public SampleActionFilterAttribute() : base(typeof(SampleActionFilterImpl))
+        public LogActionFilterAttribute() : base(typeof(LogActionFilterImpl))
         {
         }
 
-        private class SampleActionFilterImpl : IActionFilter
+        private class LogActionFilterImpl : IActionFilter
         {
             private readonly ILogger _logger;
-            public SampleActionFilterImpl(ILoggerFactory loggerFactory)
+            public LogActionFilterImpl(ILoggerFactory loggerFactory)
             {
-                _logger = loggerFactory.CreateLogger<SampleActionFilterAttribute>();
+                _logger = loggerFactory.CreateLogger<LogActionFilterAttribute>();
             }
 
             public void OnActionExecuting(ActionExecutingContext context)

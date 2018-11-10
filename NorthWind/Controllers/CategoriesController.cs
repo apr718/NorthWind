@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using NorthWind.Extensions;
+using NorthWind.Filters;
 using NorthWind.Services.Interfaces;
 using Services.Interfaces;
 
@@ -21,7 +22,7 @@ namespace NorthWind.Controllers
         }
 
         // GET: Categories
-        [SampleActionFilter]
+        [LogActionFilter]
         public async Task<IActionResult> Index()
         {
             int pageSize = _configurationService.PageSize;
@@ -30,7 +31,7 @@ namespace NorthWind.Controllers
         }
 
         // GET: Categories/Details/5
-        [SampleActionFilter]
+        [LogActionFilter]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -49,7 +50,7 @@ namespace NorthWind.Controllers
         }
 
         // GET: Categories/Create
-        [SampleActionFilter]
+        [LogActionFilter]
         public IActionResult Create()
         {
             return View();
@@ -72,7 +73,7 @@ namespace NorthWind.Controllers
         }
 
         // GET: Categories/Edit/5
-        [SampleActionFilter]
+        [LogActionFilter]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -91,7 +92,7 @@ namespace NorthWind.Controllers
         // POST: Categories/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [SampleActionFilter]
+        [LogActionFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName,Description")] Category category)
@@ -142,7 +143,7 @@ namespace NorthWind.Controllers
         }
 
         // POST: Categories/Delete/5
-        [SampleActionFilter]
+        [LogActionFilter]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

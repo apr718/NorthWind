@@ -9,6 +9,9 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<div>
+    @await Component.InvokeAsync("BreadcrumbsComponent")
+</div>
 <table class="table">
     <thead>
         <tr>

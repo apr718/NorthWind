@@ -6,12 +6,15 @@
 
 <h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <div>
-    @await Component.InvokeAsync("BreadcrumbsComponent")
+    @await Component.InvokeAsync("Breadcrumbs")
 </div>
+
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
 <table class="table">
     <thead>
         <tr>

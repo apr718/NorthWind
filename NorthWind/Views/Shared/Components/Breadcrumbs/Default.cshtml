@@ -1,0 +1,19 @@
+﻿@model Microsoft.AspNetCore.Http.PathString
+
+
+<div pannel panel-denger widget>
+    <div>
+        <p>
+            <li><a asp-controller="Home" asp-action="Index">Home</a>
+      
+            <a asp-action="Index">> Products</a>
+            
+            @if (Model.Value.Contains("Details"))
+            {
+            <a asp-action="Create">> Create New</a>
+            }
+            </li>
+        </p>
+    </div>
+</div>
+

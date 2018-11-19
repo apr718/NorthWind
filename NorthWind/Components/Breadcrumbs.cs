@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NorthWind.ViewComponents
+namespace NorthWind.Components
 {
-    public class BreadcrumbsComponent : ViewComponent
+    public class Breadcrumbs : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {

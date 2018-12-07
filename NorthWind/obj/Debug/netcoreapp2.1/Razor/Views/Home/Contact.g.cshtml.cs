@@ -85,7 +85,7 @@ Write(ViewData["Message"]);
             WriteLiteral("</h3>\r\n\r\n<address>\r\n    Tiragnaia str., 150<br />\r\n    Minsk, Belarus 220040<br />\r\n    <abbr title=\"Phone\">Phone:</abbr>\r\n    +375 29 187 13 63\r\n</address>\r\n\r\n<address>\r\n    <strong>Developing by:</strong> ");
             EndContext();
             BeginContext(303, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7fec3fea28294f94b5d836b1600a38c5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a48927eca6ab4032bfb396670a172bca", async() => {
                 BeginContext(346, 25, true);
                 WriteLiteral("Andrii_Prykhodko@epam.com");
                 EndContext();

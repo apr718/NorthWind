@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{99D8E45F-2C7B-4C71-BC69-6985DDAD544D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{A892213B-1700-4D2D-8E61-A0A851E43F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{A892213B-1700-4D2D-8E61-A0A851E43F04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Api", "NorthWind.Api\NorthWind.Api.csproj", "{7130E3F5-8648-4963-BD2E-23FD79172D4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A892213B-1700-4D2D-8E61-A0A851E43F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7130E3F5-8648-4963-BD2E-23FD79172D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7130E3F5-8648-4963-BD2E-23FD79172D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7130E3F5-8648-4963-BD2E-23FD79172D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7130E3F5-8648-4963-BD2E-23FD79172D4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

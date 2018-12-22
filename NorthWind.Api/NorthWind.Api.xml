@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NorthWind.Api</name>
+    </assembly>
+    <members>
+        <member name="T:NorthWind.API.Controllers.CategoriesController">
+            <inheritdoc />
+            <summary>
+            CategoriesController
+            </summary>
+        </member>
+        <member name="M:NorthWind.API.Controllers.CategoriesController.#ctor(Services.Interfaces.IBLService,NorthWind.Api.Service.Interfaces.IConfigurationService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="bLService"></param>
+            <param name="configurationService"></param>
+        </member>
+        <member name="M:NorthWind.API.Controllers.CategoriesController.Get">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NorthWind.API.Controllers.CategoriesController.GetCategoryItem(System.Int32)">
+            <summary>
+            GetById
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NorthWind.API.Controllers.CategoriesController.Post(Models.Category)">
+            <summary>
+            Post
+            </summary>
+            <param name="categoryItem"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NorthWind.Api.Controllers.ProductsController">
+            <inheritdoc />
+            <summary>
+            ProductsController
+            </summary>
+        </member>
+        <member name="M:NorthWind.Api.Controllers.ProductsController.#ctor(Services.Interfaces.IBLService,NorthWind.Api.Service.Interfaces.IConfigurationService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="bLService"></param>
+            <param name="configurationService"></param>
+        </member>
+        <member name="M:NorthWind.Api.Controllers.ProductsController.GetProducts">
+            <summary>
+            Get method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NorthWind.Api.Controllers.ProductsController.GetProductItem(System.Int32)">
+            <summary>
+            GetbyId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NorthWind.Api.Controllers.ProductsController.Update(Models.Product)">
+            <summary>
+            Update
+            </summary>
+            <param name="productItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NorthWind.Api.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

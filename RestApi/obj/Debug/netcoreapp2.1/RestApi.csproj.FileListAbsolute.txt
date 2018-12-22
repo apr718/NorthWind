@@ -1,0 +1,9 @@
+E:\Projects\Core\NorthWind2\RestApi\obj\Debug\netcoreapp2.1\RestApi.csprojAssemblyReference.cache
+E:\Projects\Core\NorthWind2\RestApi\obj\Debug\netcoreapp2.1\RestApi.csproj.CoreCompileInputs.cache
+E:\Projects\Core\NorthWind2\RestApi\obj\Debug\netcoreapp2.1\RestApi.AssemblyInfoInputs.cache
+E:\Projects\Core\NorthWind2\RestApi\obj\Debug\netcoreapp2.1\RestApi.AssemblyInfo.cs
+E:\Projects\Core\NorthWind2\RestApi\bin\Debug\netcoreapp2.1\RestApi.deps.json
+E:\Projects\Core\NorthWind2\RestApi\bin\Debug\netcoreapp2.1\RestApi.dll
+E:\Projects\Core\NorthWind2\RestApi\bin\Debug\netcoreapp2.1\RestApi.pdb
+E:\Projects\Core\NorthWind2\RestApi\obj\Debug\netcoreapp2.1\RestApi.dll
+E:\Projects\Core\NorthWind2\RestApi\obj\Debug\netcoreapp2.1\RestApi.pdb

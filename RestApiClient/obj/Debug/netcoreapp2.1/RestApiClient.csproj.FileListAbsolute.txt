@@ -1,0 +1,8 @@
+E:\Projects\Core\NorthWind2\RestApiClient\bin\Debug\netcoreapp2.1\RestApiClient.deps.json
+E:\Projects\Core\NorthWind2\RestApiClient\bin\Debug\netcoreapp2.1\RestApiClient.runtimeconfig.json
+E:\Projects\Core\NorthWind2\RestApiClient\bin\Debug\netcoreapp2.1\RestApiClient.runtimeconfig.dev.json
+E:\Projects\Core\NorthWind2\RestApiClient\bin\Debug\netcoreapp2.1\RestApiClient.dll
+E:\Projects\Core\NorthWind2\RestApiClient\obj\Debug\netcoreapp2.1\RestApiClient.csproj.CoreCompileInputs.cache
+E:\Projects\Core\NorthWind2\RestApiClient\obj\Debug\netcoreapp2.1\RestApiClient.AssemblyInfoInputs.cache
+E:\Projects\Core\NorthWind2\RestApiClient\obj\Debug\netcoreapp2.1\RestApiClient.AssemblyInfo.cs
+E:\Projects\Core\NorthWind2\RestApiClient\obj\Debug\netcoreapp2.1\RestApiClient.csprojAssemblyReference.cache

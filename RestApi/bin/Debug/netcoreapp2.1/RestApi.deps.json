@@ -1,0 +1,60 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "5b20b2935d4bd3f802f5d0629d753e2fde52724a"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "RestApi/1.0.0": {
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.18",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "RestApi.dll": {}
+        }
+      },
+      "Microsoft.Rest.ClientRuntime/2.3.18": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.3.18.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RestApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Rest.ClientRuntime/2.3.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyBbuIBElqUBsEO8pCPyMuoB0SdjUGK9fNXaf8buxJ4FoLk5y+yXK/tVn8+LsBtBg6Q+krzFff8Mq7LOytlWWg==",
+      "path": "microsoft.rest.clientruntime/2.3.18",
+      "hashPath": "microsoft.rest.clientruntime.2.3.18.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
+    }
+  }
+}
